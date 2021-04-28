@@ -1,0 +1,16 @@
+@media print {
+  #print_table {
+    display: block !important;
+  }
+
+  #table-card {
+    display: none !important;
+  }
+}
+
+#print_table {
+  display: none;
+}
+#table-card {
+  display: block;
+}

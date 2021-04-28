@@ -1,0 +1,78 @@
+.display-table {
+  width: 100%;
+  td {
+    width: 50%;
+  }
+}
+#form-data {
+  display: block;
+}
+#print_table {
+  display: none;
+}
+.invoice-wrapper {
+  .invoice-page {
+    .recipient-info {
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .company-info {
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .invoice-items-table {
+      .table {
+        width: 100%;
+        color: #626262;
+        border: 2px solid #f8f8f8;
+        margin-bottom: 1rem;
+      }
+    }
+    .invoice-total-table {
+      .table {
+        width: 100%;
+        color: #626262;
+        border: 2px solid #f8f8f8;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media print {
+  #form-data {
+    display: none;
+  }
+  #print_table {
+    display: block;
+  }
+  .invoice-wrapper .invoice-page .recipient-info p {
+    margin-bottom: 0;
+  }
+
+  .invoice-wrapper .invoice-page .company-info p {
+    margin-bottom: 0;
+  }
+
+  .invoice-wrapper .invoice-page .invoice-items-table .table {
+    display: block !important;
+    width: 100% !important;
+    color: #626262;
+    border: 2px solid #f8f8f8;
+    margin-bottom: 1rem;
+  }
+  .invoice-wrapper .invoice-page .invoice-items-table .table tr td,
+  .invoice-wrapper .invoice-page .invoice-items-table .table tr td {
+    width: 33.33%;
+  }
+
+  .invoice-wrapper .invoice-page .invoice-total-table .table {
+    display: block;
+    width: 100%;
+    color: #626262;
+    border: 2px solid #f8f8f8;
+    margin-bottom: 1rem;
+  }
+}
